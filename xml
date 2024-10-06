@@ -1,0 +1,54 @@
+(```)xml
+<?xml version="1.0" encoding="UTF-8"?>
+<DecentSampler>
+  <effects>
+    <effect type="lowpass" frequency="21989.00794182446"/>
+    <effect type="chorus" mix="0.0" modDepth="0.2" modRate="0.2"/>
+    <effect type="reverb" wetLevel="0.0625"/>
+  </effects>
+  <ui width="812" height="375" bgImage="Images/background.jpg">
+    <tab name="main">
+      <!-- Micro Tuning Slider -->
+      <labeled-knob x="100" y="80" width="100" textSize="16" textColor="FF000000" trackForegroundColor="FF000000" trackBackgroundColor="66999999" label="Micro Tuning" type="float" minValue="-12" maxValue="12" value="0">
+        <binding type="general" level="instrument" position="0" parameter="GLOBAL_TUNING"/>
+      </labeled-knob>
+      <!-- Existing Knobs -->
+      <labeled-knob x="255" y="80" width="100" textSize="16" textColor="AA000000" trackForegroundColor="CC000000" trackBackgroundColor="66999999" label="Attack" type="float" minValue="0.0" maxValue="5" value="0.199999988079071">
+        <binding type="amp" level="instrument" position="0" parameter="ENV_ATTACK"/>
+      </labeled-knob>
+      <labeled-knob x="330" y="80" width="100" textSize="16" textColor="AA000000" trackForegroundColor="CC000000" trackBackgroundColor="66999999" label="Decay" type="float" minValue="0.0" maxValue="5" value="1.0">
+        <binding type="amp" level="instrument" position="0" parameter="ENV_DECAY"/>
+      </labeled-knob>
+      <labeled-knob x="405" y="80" width="100" textSize="16" textColor="AA000000" trackForegroundColor="CC000000" trackBackgroundColor="66999999" label="Sustain" type="float" minValue="0.0" maxValue="1" value="0.9999999776482582">
+        <binding type="amp" level="instrument" position="0" parameter="ENV_SUSTAIN"/>
+      </labeled-knob>
+      <labeled-knob x="480" y="80" width="100" textSize="16" textColor="AA000000" trackForegroundColor="CC000000" trackBackgroundColor="66999999" label="Release" type="float" minValue="0.01" maxValue="4.0" value="0.1000000014901161">
+        <binding type="amp" level="instrument" position="0" parameter="ENV_RELEASE"/>
+      </labeled-knob>
+      <labeled-knob x="562" y="80" width="100" textSize="16" textColor="AA000000" trackForegroundColor="CC000000" trackBackgroundColor="66999999" label="Chorus" type="float" minValue="0.0" maxValue="1" value="0">
+        <binding type="effect" level="instrument" position="1" parameter="FX_MIX"/>
+      </labeled-knob>
+      <labeled-knob x="635" y="80" width="100" textSize="16" textColor="AA000000" trackForegroundColor="CC000000" trackBackgroundColor="66999999" label="Tone" type="float" minValue="0.5" maxValue="1" value="0.9999999888241291">
+        <binding type="effect" level="instrument" position="0" parameter="FX_FILTER_FREQUENCY" translation="table" translationTable="0,33;0.3,150;0.4,450;0.5,1100;0.7,4100;0.9,11000;1.0001,22000"/>
+      </labeled-knob>
+      <labeled-knob x="710" y="80" width="100" textSize="16" textColor="FF000000" trackForegroundColor="CC000000" trackBackgroundColor="66999999" label="Reverb" type="percent" minValue="0" maxValue="100" value="6.25">
+        <binding type="effect" level="instrument" position="2" parameter="FX_REVERB_WET_LEVEL" translation="linear" translationOutputMin="0" translationOutputMax="1"/>
+      </labeled-knob>
+    </tab>
+    <keyboard/>
+  </ui>
+  <groups attack="0.199999988079071" decay="1.0" sustain="0.9999999776482582" release="0.1000000014901161">
+    <group name="Group">
+      <sample path="GMTunning/27_D2_Fretless_Gtr_RR6_20240813-10130.wav" name="27_D2_Fretless_Gtr_RR6_20240813-10130" rootNote="38" loNote="0" hiNote="127" loVel="0" hiVel="127" end="576000"/>
+      <effects/>
+    </group>
+  </groups>
+  <midi>
+    <cc number="1">
+      <binding level="instrument" type="general" parameter="GLOBAL_TUNING" translation="linear" translationOutputMin="-12" translationOutputMax="12"/>
+    </cc>
+  </midi>
+  <modulators/>
+  <tags/>
+  <noteSequences/>
+</DecentSampler>
