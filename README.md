@@ -1,5 +1,8 @@
 # Decent Sampler Instrument with Global Micro Tuning
 
+![Decent Sampler Instrument with Global Micro Tuning](https://github.com/user-attachments/assets/6e24ea9e-3943-43dd-984c-054ee1c8dc3f)
+
+
 This repository contains an XML file for a custom instrument created for Decent Sampler, featuring global micro tuning capabilities.
 
 ## Current Status
